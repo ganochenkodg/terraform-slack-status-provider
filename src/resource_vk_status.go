@@ -1,7 +1,7 @@
-package provider
+package main
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"net/http"
 	"encoding/json"
 )

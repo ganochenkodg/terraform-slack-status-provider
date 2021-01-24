@@ -1,2 +1,2 @@
 #!/bin/bash
-GOPATH=$(pwd)/.. go build ./main.go
+GOPATH=$(pwd)/..:~/go go build ./main.go
