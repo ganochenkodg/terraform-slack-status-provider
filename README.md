@@ -1,1 +1,1 @@
-# terraform-slack-status-provider
+# terraform-vk-status-provider
