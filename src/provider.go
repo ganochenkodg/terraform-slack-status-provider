@@ -16,7 +16,7 @@ func Provider() terraform.ResourceProvider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"vk_status": resourceVkStatus(),
+			"vkstatus_status": resourceVkStatus(),
 		},
 		ConfigureFunc: configureProvider,
 	}

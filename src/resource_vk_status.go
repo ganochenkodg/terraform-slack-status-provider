@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 	"net/http"
-	"encoding/json"
 	"io/ioutil"
 )
 
@@ -92,10 +91,9 @@ func resourceVkStatusImportState(d *schema.ResourceData, meta interface{}) ([]*s
   if err != nil {
     return []*schema.ResourceData{d},err
   }
-	var result map[string]interface{}
-	json.Unmarshal([]byte(responseData), &result)
-
-	d.Set("status_text", result["response"].([]interface{})[0].(map[string]interface{})["text"])
+  cleanedResp := responseData[21:]
+	cleanedResp = cleanedResp[:len(cleanedResp)-3]
+	d.Set("status_text", string(cleanedResp))
 
 	return []*schema.ResourceData{d}, nil
 }

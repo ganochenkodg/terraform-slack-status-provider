@@ -1,4 +1,4 @@
-module terraform-vk-status.provider
+module terraform-provider-vkstatus
 
 go 1.15
 
