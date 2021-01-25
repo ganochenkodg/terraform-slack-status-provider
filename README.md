@@ -18,20 +18,20 @@ $ ./build.sh
 
 ```hcl
 provider "vkstatus" {
-  access_token   = "..."
+  access_token = "..."
 }
 
 terraform {
   required_providers {
-    vkstatus = {
-      source = "dmitrii/vkstatus"
-      version = ">= 0.0.1"
+    vkstatus   = {
+      source   = "dmitrii/vkstatus"
+      version  = ">= 0.0.1"
     }
   }
 }
 
 resource "vkstatus_status" "..." {
-  status_text = "<new status>"
+  status_text  = "<new status>"
 }
 ```
 
