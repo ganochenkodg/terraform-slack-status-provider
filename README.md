@@ -1,7 +1,7 @@
 # terraform-vk-status-provider
 This is a [Terraform](https://www.terraform.io/) provider for setting status [Vkontakte](https://vk.com)
 
-# installation
+## installation
 
 ```bash
 $ cd src
